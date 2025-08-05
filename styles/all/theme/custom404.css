@@ -1,0 +1,1039 @@
+/* Sobrescrever o estilo global dl dentro da extensão */
+.custom404-acp dl,
+.custom404-acp dl dt,
+.custom404-acp dl dd {
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Aplicar a fonte ao menu lateral e rótulos dentro da ACP */
+body.acp .navigation,
+body.acp .custom404-acp .custom404-label,
+body.acp .custom404-acp dt,
+body.acp .custom404-acp label {
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Estilos para o painel de administração (ACP) da extensão mundophpbb/custom404 */
+.custom404-acp {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    background: #f4f6f8;
+    border: 1px solid #d8e1e8;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Título principal */
+.custom404-acp h1 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 600;
+    color: #1578a2;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Mensagens de sucesso e erro */
+.custom404-acp p.success {
+    color: #fff;
+    font-weight: 600;
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: #28a745;
+    border: 1px solid #218838;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp p.error {
+    color: #fff;
+    font-weight: 600;
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: #d32f2f;
+    border: 1px solid #c82333;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Fieldset */
+.custom404-acp fieldset {
+    border: none;
+    margin: 1rem 0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Subtítulos */
+.custom404-acp legend {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-weight: 600;
+    color: #1578a2;
+    margin-bottom: 0.5rem;
+    padding-left: 8px;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Campos do formulário */
+.custom404-acp dl {
+    flex-wrap: wrap;
+    margin: 0 0 0.5rem;
+    gap: 0.5rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp dt {
+    font-weight: 500;
+    color: #333;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    line-height: 1.4;
+    flex: 0 0 150px;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp dd {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Inputs e selects */
+.custom404-acp .inputbox,
+.custom404-acp select {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.4rem;
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .inputbox:focus,
+.custom404-acp select:focus {
+    border-color: #1578a2;
+    box-shadow: 0 0 4px rgba(21, 120, 162, 0.3);
+    outline: none;
+}
+
+.custom404-acp textarea.inputbox {
+    resize: vertical;
+    min-height: 80px;
+    max-width: 100%;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Botões BBCode */
+.custom404-acp .bbcode-buttons {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .bbcode-buttons .button2 {
+    padding: 0.3rem 0.6rem;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    border-radius: 4px;
+    background: #e8ecef;
+    border: 1px solid #d8e1e8;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .bbcode-buttons .button2:hover {
+    background: #dfe4e8;
+    color: #333;
+}
+
+/* Upload de arquivo */
+.custom404-acp .file-upload {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .input-file {
+    display: none;
+}
+
+.custom404-acp .file-upload .file-name {
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    background-color: #e8ecef;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    color: #333;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .file-upload .button2 {
+    padding: 0.4rem 1rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    border-radius: 4px;
+    background: #1578a2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .file-upload .button2:hover {
+    background: #12678a;
+    color: #fff;
+}
+
+/* Reset button */
+.custom404-acp .submit-buttons #custom404-reset-default {
+    background: #ef6c00 !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 0.4rem 1rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .submit-buttons #custom404-reset-default:hover {
+    background: #e6951a !important;
+    color: #fff !important;
+}
+
+/* Popup styles */
+.custom404-acp .panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #1578a2;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    max-width: 90%;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel .inner {
+    padding: 1.5rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: #1578a2;
+    margin: 0 0 0.75rem;
+    text-align: center;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel p {
+    font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+    color: #333;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel .submit-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel input[type="button"] {
+    padding: 0.5rem 1.5rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    background: none; /* Evita fundo padrão indesejado */
+}
+
+.custom404-acp .panel #custom404-reset-confirm,
+.custom404-acp .panel #custom404-delete-logs-confirm,
+.custom404-acp .panel #custom404-delete-confirm,
+.custom404-acp .panel #custom404-no-image-ok {
+    background: #ef6c00 !important; /* Força fundo laranja */
+    color: #fff !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel #custom404-reset-confirm:hover,
+.custom404-acp .panel #custom404-delete-logs-confirm:hover,
+.custom404-acp .panel #custom404-delete-confirm:hover,
+.custom404-acp .panel #custom404-no-image-ok:hover {
+    background: #e6951a !important; /* Força hover laranja escuro */
+    color: #fff !important;
+}
+
+.custom404-acp .panel #custom404-reset-cancel,
+.custom404-acp .panel #custom404-delete-logs-cancel,
+.custom404-acp .panel #custom404-delete-cancel {
+    background: #6c757d !important; /* Fundo cinza para botões de cancelamento */
+    color: #fff !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .panel #custom404-reset-cancel:hover,
+.custom404-acp .panel #custom404-delete-logs-cancel:hover,
+.custom404-acp .panel #custom404-delete-cancel:hover {
+    background: #5a6268 !important; /* Hover cinza escuro */
+    color: #fff !important;
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .custom404-acp .panel {
+    background: #263238;
+    border-color: #4fc3f7;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel h3 {
+    color: #4fc3f7;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel p {
+    color: #d0d0d0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel #custom404-reset-confirm,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-logs-confirm,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-confirm,
+html[data-theme="dark"] .custom404-acp .panel #custom404-no-image-ok {
+    background: #ef6c00 !important; /* Força fundo laranja no tema escuro */
+    color: #fff !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel #custom404-reset-confirm:hover,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-logs-confirm:hover,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-confirm:hover,
+html[data-theme="dark"] .custom404-acp .panel #custom404-no-image-ok:hover {
+    background: #e6951a !important; /* Força hover laranja escuro */
+    color: #fff !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel #custom404-reset-cancel,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-logs-cancel,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-cancel {
+    background: #6c757d !important; /* Fundo cinza para cancelamento */
+    color: #fff !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .panel #custom404-reset-cancel:hover,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-logs-cancel:hover,
+html[data-theme="dark"] .custom404-acp .panel #custom404-delete-cancel:hover {
+    background: #5a6268 !important; /* Hover cinza escuro */
+    color: #fff !important;
+}
+
+/* Visualização da imagem */
+.custom404-acp .image-preview {
+    margin-top: 0.75rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .image-preview img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.custom404-acp .image-preview p {
+    margin: 0.3rem 0 0;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #444;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Botão Salvar */
+.custom404-acp .submit-buttons input[type="submit"] {
+    padding: 0.4rem 1.2rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    border-radius: 4px;
+    background: #1578a2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .submit-buttons input[type="submit"]:hover {
+    background: #12678a;
+    color: #fff;
+}
+
+/* Textos explicativos */
+.custom404-acp .explain,
+.custom404-acp dt span {
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #444;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Toggle Buttons */
+.theme-toggle,
+.debug-toggle,
+.show-image-toggle {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.theme-toggle input[type="checkbox"],
+.debug-toggle input[type="checkbox"],
+.show-image-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    background-color: #e8ecef;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    text-align: center;
+    min-width: 200px;
+    margin-left: 0;
+}
+
+.theme-toggle input[type="checkbox"]:checked + .toggle-button,
+.debug-toggle input[type="checkbox"]:checked + .toggle-button,
+.show-image-toggle input[type="checkbox"]:checked + .toggle-button {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #218838;
+}
+
+/* Theme Button Styles */
+.theme-button {
+    background-color: #e8ecef;
+    color: #333;
+}
+
+.theme-button[data-theme="dark"] {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #218838;
+}
+
+/* Debug Button Styles */
+.debug-button {
+    background-color: #e8ecef;
+    color: #333;
+    margin-left: 0;
+}
+
+.debug-button[data-debug="1"] {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #218838;
+}
+
+/* Show Image Button Styles */
+.show-image-button {
+    background-color: #e8ecef;
+    color: #333;
+    margin-left: 0;
+}
+
+.show-image-button[data-show-image="1"] {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #218838;
+}
+
+/* Seção de logs */
+.custom404-acp .custom404-logs {
+    margin-top: 1.5rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs h2 {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #1578a2;
+    margin-bottom: 0.75rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Ações de logs */
+.custom404-acp .custom404-logs-actions {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions label {
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #333;
+    flex: 0 0 auto;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions .inputbox {
+    padding: 0.3rem;
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    background-color: #fff;
+    width: 150px;
+    flex: 0 0 auto;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions select {
+    padding: 0.3rem;
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    background-color: #fff;
+    width: 80px;
+    flex: 0 0 auto;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions .button2 {
+    padding: 0.3rem 0.6rem;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    border-radius: 4px;
+    background: #1578a2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex: 0 0 auto;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions .button2:hover {
+    background: #12678a;
+    color: #fff;
+}
+
+.custom404-acp .custom404-logs-actions .button2#custom404-delete-logs-button {
+    background: #d32f2f !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .custom404-logs-actions .button2#custom404-delete-logs-button:hover {
+    background: #b71c1c !important;
+    color: #fff !important;
+}
+
+/* Tabela de logs */
+.custom404-acp .table1 {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    background: #fff;
+    border: 1px solid #d8e1e8;
+    border-radius: 4px;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .table1 th,
+.custom404-acp .table1 td {
+    padding: 0.5rem;
+    border: 1px solid #d8e1e8;
+    text-align: left;
+    word-wrap: break-word;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.custom404-acp .table1 th {
+    background: #e8ecef;
+    color: #1578a2;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+}
+
+.custom404-acp .table1 td {
+    background: #fff;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #333;
+}
+
+.custom404-acp .table1 tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.custom404-acp .table1 tr:hover td {
+    background: #e8ecef;
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .custom404-acp {
+    background: #1e272e;
+    border-color: #37474f;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp h1,
+html[data-theme="dark"] .custom404-acp legend,
+html[data-theme="dark"] .custom404-acp .custom404-logs h2,
+html[data-theme="dark"] .custom404-acp .custom404-logs-actions label {
+    color: #4fc3f7;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp dt,
+html[data-theme="dark"] .toggle-button {
+    color: #b0bec5;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .image-preview p,
+html[data-theme="dark"] .custom404-acp .debug-explain,
+html[data-theme="dark"] .custom404-acp dt span {
+    color: #a0a0a0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .image-preview img {
+    background-color: #263238;
+}
+
+html[data-theme="dark"] .custom404-acp .file-upload .button2 {
+    background: #4fc3f7;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .file-upload .button2:hover {
+    background: #29b6f6;
+    color: #fff;
+}
+
+html[data-theme="dark"] .custom404-acp .file-name {
+    background-color: #37474f;
+    color: #e0e0e0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .button2#custom404-delete-logs-button {
+    background: #d32f2f !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .button2#custom404-delete-logs-button:hover {
+    background: #b71c1c !important;
+    color: #fff !important;
+}
+
+html[data-theme="dark"] .custom404-acp .submit-buttons #custom404-reset-default {
+    background: #ef6c00 !important;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .submit-buttons #custom404-reset-default:hover {
+    background: #e6951a !important;
+    color: #fff !important;
+}
+
+html[data-theme="dark"] .custom404-acp .inputbox,
+html[data-theme="dark"] .custom404-acp select {
+    background-color: #263238;
+    border-color: #455a64;
+    color: #e0e0e0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .inputbox:focus,
+html[data-theme="dark"] .custom404-acp select:focus {
+    border-color: #4fc3f7;
+    box-shadow: 0 0 4px rgba(79, 195, 247, 0.3);
+}
+
+html[data-theme="dark"] .custom404-acp .bbcode-buttons .button2 {
+    background: #37474f;
+    border-color: #455a64;
+    color: #e0e0e0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .bbcode-buttons .button2:hover {
+    background: #455a64;
+}
+
+html[data-theme="dark"] .custom404-acp p.success {
+    background-color: #2e7d32;
+    border-color: #27632a;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp p.error {
+    background-color: #ef5350;
+    border-color: #e53935;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .table1 {
+    background: #263238;
+    border-color: #37474f;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .table1 th,
+html[data-theme="dark"] .custom404-acp .table1 td {
+    border-color: #455a64;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .table1 th {
+    background: #37474f;
+    color: #4fc3f7;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+}
+
+html[data-theme="dark"] .custom404-acp .table1 td {
+    background: #263238;
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #d0d0d0;
+}
+
+html[data-theme="dark"] .custom404-acp .table1 tr:nth-child(even) td {
+    background: #2e3b44;
+}
+
+html[data-theme="dark"] .custom404-acp .table1 tr:hover td {
+    background: #455a64;
+}
+
+html[data-theme="dark"] .custom404-acp .custom404-logs-actions select,
+html[data-theme="dark"] .custom404-acp .custom404-logs-actions .inputbox {
+    background-color: #263238;
+    border-color: #455a64;
+    color: #e0e0e0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .toggle-button {
+    background-color: #37474f;
+    border-color: #455a64;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .theme-toggle input[type="checkbox"]:checked + .toggle-button,
+html[data-theme="dark"] .debug-toggle input[type="checkbox"]:checked + .toggle-button,
+html[data-theme="dark"] .show-image-toggle input[type="checkbox"]:checked + .toggle-button {
+    background-color: #2e7d32;
+    border-color: #27632a;
+}
+
+html[data-theme="dark"] .custom404-acp .custom404-logs-actions .button2 {
+    background: #4fc3f7;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] .custom404-acp .custom404-logs-actions .button2:hover {
+    background: #29b6f6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .custom404-acp {
+        padding: 0.75rem;
+        margin: 1rem 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp dl {
+        flex-direction: column;
+        gap: 0.75rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp dt {
+        flex: 0 0 auto;
+        width: 100%;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp dd {
+        width: 100%;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .inputbox,
+    .custom404-acp select {
+        max-width: 100%;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .image-preview img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .theme-toggle,
+    .debug-toggle,
+    .show-image-toggle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .debug-explain {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions label {
+        font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions .inputbox {
+        width: 120px;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions select {
+        width: 70px;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions .button2 {
+        padding: 0.3rem 0.5rem;
+        font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .panel {
+        width: 90%;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom404-acp {
+        padding: 0.5rem;
+        margin: 0.75rem 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .file-upload {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .file-upload .button2 {
+        width: 100%;
+        text-align: center;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .file-name {
+        text-align: center;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .image-preview img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .custom404-acp .custom404-logs-actions {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions .inputbox {
+        width: 100px;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions select {
+        width: 60px;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .custom404-logs-actions .button2 {
+        padding: 0.3rem 0.4rem;
+        font-size: clamp(0.5rem, 1vw, 0.6rem);
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .panel {
+        width: 95%;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+
+    .custom404-acp .panel .submit-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+    }
+}
+
+.custom404-acp .image-upload-legend {
+    display: none;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.green-button {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.green-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.debug-key {
+    position: relative;
+    padding-left: 30px;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+.debug-key::before {
+    content: "������";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.debug-explain {
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+    color: #444;
+    margin-left: 0;
+    display: block;
+    margin-top: 0.25rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* New class for debug explain container */
+.debug-explain-container {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Dark theme adjustments */
+html[data-theme="dark"] .debug-explain {
+    color: #a0a0a0;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Reduzir o espaçamento superior do debug-explain-container */
+.debug-explain-container {
+    margin-top: -1rem;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Ajustar o dl para controlar o espaçamento geral */
+.custom404-acp dl {
+    margin-top: 0.5rem;
+    font-family: 'Bai Jamjuree', 'Open Sans', Arial, sans-serif !important;
+}
+
+#image_preview {
+    max-width: 200px;
+    display: none; /* Esconde a imagem até que um caminho válido seja definido */
+}
+
+/* Tema escuro para botões de toggle */
+html[data-theme="dark"] .theme-button {
+    background-color: #37474f;
+    border-color: #455a64;
+    color: #e0e0e0;
+}
+
+html[data-theme="dark"] .theme-button[data-theme="dark"] {
+    background-color: #2e7d32;
+    border-color: #27632a;
+    color: #fff;
+}
+
+html[data-theme="dark"] .debug-button {
+    background-color: #37474f;
+    border-color: #455a64;
+    color: #e0e0e0;
+}
+
+html[data-theme="dark"] .debug-button[data-debug="1"] {
+    background-color: #2e7d32;
+    border-color: #27632a;
+    color: #fff;
+}
+
+html[data-theme="dark"] .show-image-button {
+    background-color: #37474f;
+    border-color: #455a64;
+    color: #e0e0e0;
+}
+
+html[data-theme="dark"] .show-image-button[data-show-image="1"] {
+    background-color: #2e7d32;
+    border-color: #27632a;
+    color: #fff;
+}
