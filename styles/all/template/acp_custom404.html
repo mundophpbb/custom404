@@ -1,0 +1,272 @@
+<!-- INCLUDE overall_header.html -->
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<div class="custom404-acp">
+    <h1>{L_ACP_CUSTOM404_TITLE}</h1>
+
+    <!-- IF S_SUCCESS_MESSAGE -->
+        <p class="success">{S_SUCCESS_MESSAGE}</p>
+    <!-- ENDIF -->
+    <!-- IF S_ERROR_MESSAGE -->
+        <p class="error">{S_ERROR_MESSAGE}</p>
+    <!-- ENDIF -->
+
+    <!-- Hidden div for JavaScript translations -->
+    <div id="custom404-translations" 
+         data-title-required="{L_ACP_CUSTOM404_TITLE_REQUIRED}"
+         data-message-required="{L_ACP_CUSTOM404_MESSAGE_REQUIRED}"
+         data-title-too-short="{L_ACP_CUSTOM404_TITLE_TOO_SHORT}"
+         data-message-too-short="{L_ACP_CUSTOM404_MESSAGE_TOO_SHORT}"
+         data-no-file-chosen="{L_ACP_CUSTOM404_NO_FILE_CHOSEN}"
+         data-image-preview="{L_ACP_CUSTOM404_IMAGE_PREVIEW}"
+         data-image-not-found="{L_ACP_CUSTOM404_IMAGE_NOT_FOUND}"
+         data-default-image-path="{DEFAULT_IMAGE_PATH}"
+         data-debug-mode="{CUSTOM404_DEBUG_MODE}"
+         data-reset-confirm="{L_ACP_CUSTOM404_RESET_CONFIRM}"
+         data-default-title="{L_CUSTOM404_DEFAULT_TITLE}"
+         data-default-message="{L_CUSTOM404_DEFAULT_MESSAGE}"
+         data-default-image-alt="{L_CUSTOM404_DEFAULT_IMAGE_ALT}"
+         data-confirm-button="{L_ACP_CUSTOM404_RESET_DEFAULT}"
+         data-cancel-button="{L_CANCEL}"
+         data-clear-search="{L_ACP_CUSTOM404_CLEAR_SEARCH}"
+         data-delete-confirm="{L_ACP_CUSTOM404_DELETE_CONFIRM}"
+         data-no-image-selected="{L_ACP_CUSTOM404_NO_IMAGE_SELECTED}"
+         data-select-image="{L_ACP_CUSTOM404_SELECT_IMAGE}"
+         data-form-token-missing="{L_FORM_TOKEN_MISSING}"
+         data-log-search-placeholder="{L_ACP_CUSTOM404_LOG_SEARCH_PLACEHOLDER}"
+         data-l-acp-custom404-theme-light="{L_ACP_CUSTOM404_THEME_LIGHT}"
+         data-l-acp-custom404-theme-dark="{L_ACP_CUSTOM404_THEME_DARK}"
+         data-l-acp-custom404-debug-mode-on="{L_ACP_CUSTOM404_DEBUG_MODE_ON}"
+         data-l-acp-custom404-debug-mode-off="{L_ACP_CUSTOM404_DEBUG_MODE_OFF}"
+         data-l-acp-custom404-show-image-on="{L_ACP_CUSTOM404_SHOW_IMAGE_ON}"
+         data-l-acp-custom404-show-image-off="{L_ACP_CUSTOM404_SHOW_IMAGE_OFF}"
+         style="display: none;"></div>
+
+    <!-- Popup para reset confirmation -->
+    <div id="custom404-reset-popup" class="panel" style="display: none;">
+        <div class="inner">
+            <h3>{L_ACP_CUSTOM404_RESET_DEFAULT}</h3>
+            <p id="custom404-reset-message">{L_ACP_CUSTOM404_RESET_CONFIRM}</p>
+            <p class="submit-buttons">
+                <input type="button" id="custom404-reset-confirm" value="{L_ACP_CUSTOM404_RESET_DEFAULT}" />
+                <input type="button" id="custom404-reset-cancel" value="{L_CANCEL}" />
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup para delete confirmation -->
+    <div id="custom404-delete-popup" class="panel" style="display: none;">
+        <div class="inner">
+            <h3>{L_ACP_CUSTOM404_DELETE_IMAGE}</h3>
+            <p id="custom404-delete-message">{L_ACP_CUSTOM404_DELETE_CONFIRM}</p>
+            <p class="submit-buttons">
+                <input type="button" id="custom404-delete-confirm" value="{L_ACP_CUSTOM404_DELETE}" />
+                <input type="button" id="custom404-delete-cancel" value="{L_CANCEL}" />
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup para aviso de nenhuma imagem selecionada -->
+    <div id="custom404-no-image-popup" class="panel" style="display: none;">
+        <div class="inner">
+            <h3>{L_ACP_CUSTOM404_DELETE_IMAGE}</h3>
+            <p id="custom404-no-image-message">{L_ACP_CUSTOM404_NO_IMAGE_SELECTED}</p>
+            <p class="submit-buttons">
+                <input type="button" id="custom404-no-image-ok" value="{L_ACP_CUSTOM404_OK}" />
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup para confirmação de exclusão de logs -->
+    <div id="custom404-delete-logs-popup" class="panel" style="display: none;">
+        <div class="inner">
+            <h3>{L_ACP_CUSTOM404_DELETE_LOGS}</h3>
+            <p id="custom404-delete-logs-message">{L_ACP_CUSTOM404_DELETE_LOGS_CONFIRM}</p>
+            <p class="submit-buttons">
+                <input type="button" id="custom404-delete-logs-confirm" value="{L_ACP_CUSTOM404_DELETE_LOGS}" />
+                <input type="button" id="custom404-delete-logs-cancel" value="{L_CANCEL}" />
+            </p>
+        </div>
+    </div>
+
+    <!-- Formulário principal -->
+    <form id="custom404-main-form" method="post" action="{U_ACTION}" enctype="multipart/form-data">
+        <fieldset>
+            <dl>
+                <dt><label for="custom404_theme" class="custom404-label">{L_ACP_CUSTOM404_THEME_LABEL}:</label></dt>
+                <dd class="theme-toggle">
+                    <input type="hidden" name="custom404_theme" id="custom404_theme_hidden" value="{CUSTOM404_THEME}">
+                    <button type="button" id="custom404_theme_toggle" class="toggle-button theme-button">
+                        <!-- IF CUSTOM404_THEME == 'light' -->{L_ACP_CUSTOM404_THEME_LIGHT}<!-- ELSE -->{L_ACP_CUSTOM404_THEME_DARK}<!-- ENDIF -->
+                    </button>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_show_image" class="custom404-label">{L_ACP_CUSTOM404_SHOW_IMAGE}:</label></dt>
+                <dd class="show-image-toggle">
+                    <input type="hidden" name="custom404_show_image" id="custom404_show_image_hidden" value="{CUSTOM404_SHOW_IMAGE}">
+                    <button type="button" id="custom404_show_image_toggle" class="toggle-button show-image-button">
+                        <!-- IF CUSTOM404_SHOW_IMAGE -->{L_ACP_CUSTOM404_SHOW_IMAGE_ON}<!-- ELSE -->{L_ACP_CUSTOM404_SHOW_IMAGE_OFF}<!-- ENDIF -->
+                    </button>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_title_key" class="custom404-label">{L_ACP_CUSTOM404_TITLE_LABEL}:</label></dt>
+                <dd><input type="text" name="custom404_title_key" id="custom404_title_key" value="{CUSTOM404_TITLE}" maxlength="255" class="inputbox" /></dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_message_key" class="custom404-label">{L_ACP_CUSTOM404_MESSAGE_LABEL}:</label></dt>
+                <dd>
+                    <!-- IF S_BBCODE_EDITOR -->
+                        <!-- INCLUDE posting_buttons.html -->
+                        <textarea name="custom404_message_key" id="custom404_message_key" rows="6" cols="60" class="inputbox">{CUSTOM404_MESSAGE}</textarea>
+                    <!-- ELSE -->
+                        <div id="format-buttons" class="bbcode-buttons">
+                            <input type="button" class="button2" value="B" onclick="insertBBCode('[b]', '[/b]')" title="{L_BBCODE_B_HELP}" />
+                            <input type="button" class="button2" value="I" onclick="insertBBCode('[i]', '[/i]')" title="{L_BBCODE_I_HELP}" />
+                            <input type="button" class="button2" value="U" onclick="insertBBCode('[u]', '[/u]')" title="{L_BBCODE_U_HELP}" />
+                            <input type="button" class="button2" value="Quote" onclick="insertBBCode('[quote]', '[/quote]')" title="{L_BBCODE_Q_HELP}" />
+                            <input type="button" class="button2" value="URL" onclick="insertBBCode('[url]', '[/url]')" title="{L_BBCODE_L_HELP}" />
+                        </div>
+                        <textarea name="custom404_message_key" id="custom404_message_key" rows="6" cols="60" class="inputbox">{CUSTOM404_MESSAGE}</textarea>
+                    <!-- ENDIF -->
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_image_alt_key" class="custom404-label">{L_ACP_CUSTOM404_IMAGE_ALT_LABEL}:</label></dt>
+                <dd><input type="text" name="custom404_image_alt_key" id="custom404_image_alt_key" value="{CUSTOM404_IMAGE_ALT}" maxlength="255" class="inputbox" /></dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_image_path" class="custom404-label">{L_ACP_CUSTOM404_IMAGE_PATH_LABEL}:</label><br /><span>{L_ACP_CUSTOM404_IMAGE_PATH_EXPLAIN}</span></dt>
+                <dd>
+                    <select name="custom404_image_path" id="custom404_image_path" class="image-path-select">
+                        <!-- BEGIN image_options -->
+                        <option value="{image_options.VALUE}" data-absolute-path="{image_options.ABSOLUTE_PATH}"{image_options.SELECTED}>{image_options.LABEL}</option>
+                        <!-- END image_options -->
+                    </select>
+                    <div class="image-preview">
+                        <img id="image_preview" src="{CUSTOM404_IMAGE_PATH}" alt="{L_ACP_CUSTOM404_IMAGE_ALT}" style="max-width: 200px;" />
+                        <p id="preview_message">{L_ACP_CUSTOM404_IMAGE_PREVIEW}</p>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label for="custom404_image_upload" class="custom404-label">{L_ACP_CUSTOM404_IMAGE_UPLOAD}:</label><br /><span>{L_ACP_CUSTOM404_UPLOAD_INFO}</span></dt>
+                <dd>
+                    <div class="file-upload">
+                        <input type="file" name="custom404_image_upload" id="custom404_image_upload" accept="{ALLOWED_EXTENSIONS}" class="input-file" />
+                        <input type="button" class="button2" onclick="document.getElementById('custom404_image_upload').click();" value="{L_ACP_CUSTOM404_CHOOSE_FILE}" />
+                        <span id="file-name" class="file-name">{L_ACP_CUSTOM404_NO_FILE_CHOSEN}</span>
+                        <input type="submit" name="upload" value="{L_ACP_CUSTOM404_UPLOAD_IMAGE}" class="button2" />
+                    </div>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label for="delete_image_path" class="custom404-label">{L_ACP_CUSTOM404_DELETE_IMAGE}:</label><br /><span>{L_ACP_CUSTOM404_DELETE_IMAGE_EXPLAIN}</span></dt>
+                <dd>
+                    <div class="file-upload">
+                        <select name="delete_image_path" id="delete_image_path">
+                            <option value="">{L_ACP_CUSTOM404_SELECT_IMAGE}</option>
+                            <!-- BEGIN delete_image_options -->
+                            <option value="{delete_image_options.VALUE}">{delete_image_options.LABEL}</option>
+                            <!-- END delete_image_options -->
+                        </select>
+                        <input type="button" id="custom404-delete-button" value="{L_ACP_CUSTOM404_DELETE}" class="button2" />
+                    </div>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt><label class="custom404-label">{L_ACP_CUSTOM404_DEBUG_MODE}:</label><span class="debug-explain">{L_ACP_CUSTOM404_DEBUG_EXPLAIN}</span></dt>
+                <dd class="debug-toggle">
+                    <input type="hidden" name="custom404_debug_mode" id="custom404_debug_mode_hidden" value="{CUSTOM404_DEBUG_MODE}">
+                    <button type="button" id="custom404_debug_toggle" class="toggle-button debug-button" style="margin-left: 0;">
+                        <!-- IF CUSTOM404_DEBUG_MODE -->{L_ACP_CUSTOM404_DEBUG_MODE_ON}<!-- ELSE -->{L_ACP_CUSTOM404_DEBUG_MODE_OFF}<!-- ENDIF -->
+                    </button>
+                </dd>
+                <dd class="debug-explain-container"></dd>
+            </dl>
+        </fieldset>
+
+        <fieldset>
+            <p class="submit-buttons">
+                <input type="submit" name="submit" value="{L_ACP_CUSTOM404_SAVE_CHANGES}" class="button2" />
+                <input type="button" id="custom404-reset-default" value="{L_ACP_CUSTOM404_RESET_DEFAULT}" class="button2" />
+                {S_FORM_TOKEN}
+            </p>
+        </fieldset>
+    </form>
+
+    <!-- Formulário separado para exclusão -->
+    <form id="delete-image-form" method="post" action="{U_ACTION}">
+        <input type="hidden" name="delete_image" value="1" />
+        <input type="hidden" name="delete_image_path" id="delete_image_path_hidden" value="" />
+        {S_FORM_TOKEN}
+    </form>
+
+    <div class="custom404-logs">
+        <h2>{L_ACP_CUSTOM404_LOGS}</h2>
+        <div class="custom404-logs-actions">
+            <form method="post" action="{U_ACTION}">
+                <label for="log_search">{L_ACP_CUSTOM404_LOG_SEARCH}:</label>
+                <input type="text" name="log_search" id="log_search" value="{LOG_SEARCH}" class="inputbox" placeholder="{L_ACP_CUSTOM404_LOG_SEARCH_PLACEHOLDER}" aria-label="{L_ACP_CUSTOM404_LOG_SEARCH}" />
+                <input type="submit" name="search_logs" value="{L_ACP_CUSTOM404_LOG_SEARCH}" class="button2" />
+                <input type="submit" name="clear_search" value="{L_ACP_CUSTOM404_CLEAR_SEARCH}" class="button2 clear-search-button" />
+                <label for="log_limit">{L_ACP_CUSTOM404_LOG_LIMIT}:</label>
+                <select name="log_limit" id="log_limit" class="log-limit-select">
+                    <!-- BEGIN log_limit_options -->
+                    <option value="{log_limit_options.VALUE}"{log_limit_options.SELECTED}>{log_limit_options.LABEL}</option>
+                    <!-- END log_limit_options -->
+                </select>
+                <input type="submit" name="export_logs" value="{L_ACP_CUSTOM404_EXPORT_LOGS}" class="button2" />
+                <input type="button" id="custom404-delete-logs-button" value="{L_ACP_CUSTOM404_DELETE_LOGS}" class="button2" />
+                {S_FORM_TOKEN}
+            </form>
+        </div>
+
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th>{L_ACP_CUSTOM404_URL}</th>
+                    <th>{L_ACP_CUSTOM404_IP_ADDRESS}</th>
+                    <th>{L_ACP_CUSTOM404_REQUEST_TIME}</th>
+                    <th>{L_ACP_CUSTOM404_REFERRER}</th>
+                    <th>{L_ACP_CUSTOM404_USER_AGENT}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- BEGIN logs -->
+                <tr>
+                    <td>{logs.REQUEST_URL}</td>
+                    <td>{logs.CLIENT_IP}</td>
+                    <td>{logs.REQUEST_TIME}</td>
+                    <td>{logs.REFERRER}</td>
+                    <td>{logs.USER_AGENT}</td>
+                </tr>
+                <!-- END logs -->
+                <!-- IF S_NO_LOGS -->
+                <tr>
+                    <td colspan="5" style="text-align: center;">{L_ACP_CUSTOM404_NO_LOGS}</td>
+                </tr>
+                <!-- ENDIF -->
+            </tbody>
+        </table>
+
+        <!-- IF TOTAL_LOGS > 0 -->
+        <div class="log-info">
+            {L_ACP_CUSTOM404_TOTAL_LOGS}: {TOTAL_LOGS}
+        </div>
+        <!-- ELSE -->
+        <p>{L_ACP_CUSTOM404_NO_LOGS}</p>
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDECSS @mundophpbb_custom404/custom404.css -->
+<!-- INCLUDEJS @mundophpbb_custom404/custom404.js -->
+<!-- INCLUDE overall_footer.html -->
