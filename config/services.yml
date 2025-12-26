@@ -1,0 +1,37 @@
+services:
+    mundophpbb.custom404.listener:
+        class: mundophpbb\custom404\event\main_listener
+        arguments:
+            - '@user'
+            - '@language'
+            - '@template'
+            - '@config'
+            - '@filesystem'
+            - '@request'
+            - '@dbal.conn'
+            - '@log'
+            - '@ext.manager'
+            - '%core.root_path%'
+            - '%core.table_prefix%'
+        tags:
+            - { name: event.listener }
+
+    mundophpbb.custom404.acp.main:
+        class: mundophpbb\custom404\acp\main_module
+        arguments:
+            - '@language'
+            - '@request'
+            - '@config'
+            - '@template'
+            - '@filesystem'  # Ensure filesystem is included
+            - '@user'
+            - '@mundophpbb.custom404.upload'
+        tags:
+            - { name: acp.module }
+
+    mundophpbb.custom404.upload:
+        class: mundophpbb\custom404\service\upload_handler
+        arguments:
+            - '@filesystem'
+            - '@language'
+            - '@config'

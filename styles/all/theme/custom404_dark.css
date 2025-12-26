@@ -1,0 +1,253 @@
+/* Estilos para a página 404 (tema escuro) */
+.custom404-panel {
+    box-sizing: border-box;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #2a2a2a;
+    border-radius: 8px;
+    max-width: 800px;
+    border: 1px solid #444;
+}
+
+.custom404-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.custom404-image {
+    text-align: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.custom404-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.custom404-title {
+    text-align: center;
+    color: #e0e0e0;
+    margin: 0;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.custom404-message {
+    text-align: center;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: #a0a0a0;
+    margin: 0;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+.custom404-return {
+    text-align: center;
+}
+
+#custom404 a,
+.custom404-button {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    color: #a0a0a0; /* Cor do texto igual ao custom404-message */
+    background: rgba(245, 166, 35, 0.15); /* Fundo inspirado no blockquote */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    border-radius: 6px;
+    border: none;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Bai Jamjuree', 'Arial', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#custom404 a::before,
+.custom404-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, #f5a623, #e6951a); /* Borda animada do blockquote */
+    border-radius: 4px 0 0 4px;
+    animation: pulseLine 2s infinite ease-in-out;
+}
+
+#custom404 a:hover,
+.custom404-button:hover {
+    background: rgba(245, 166, 35, 0.25); /* Fundo mais escuro no hover */
+    color: #e0e0e0; /* Texto mais claro no hover, igual ao título */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+#custom404 a:active,
+.custom404-button:active {
+    transform: translateY(0);
+    background: rgba(245, 166, 35, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+#custom404 a:visited,
+#custom404 a:focus,
+.custom404-button:visited,
+.custom404-button:focus {
+    color: #a0a0a0;
+    text-decoration: none;
+    background: rgba(245, 166, 35, 0.15);
+    outline: 2px solid #f5a623; /* Outline inspirado na cor do blockquote */
+    outline-offset: 2px;
+}
+
+/* Estilos para Citações (Quotes) - Geral e Página 404 */
+blockquote, 
+blockquote.uncited {
+    margin: 1.5rem 0;
+    padding: 1rem 1rem 1rem 2rem;
+    position: relative;
+    font-style: italic;
+    color: #a0a0a0;
+    background: rgba(245, 166, 35, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Bai Jamjuree', 'Arial', sans-serif;
+}
+
+blockquote::before,
+blockquote.uncited::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, #f5a623, #e6951a);
+    border-radius: 4px;
+    animation: pulseLine 2s infinite ease-in-out;
+}
+
+@keyframes pulseLine {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+blockquote cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    color: #1e90ff;
+    margin-top: 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: 'Bai Jamjuree', 'Arial', sans-serif;
+}
+
+blockquote p,
+blockquote.uncited div {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(0.9rem, 1.9vw, 1rem);
+    font-family: 'Bai Jamjuree', 'Arial', sans-serif;
+}
+
+/* Ajustes específicos para a página 404 */
+#custom404 .custom404-message blockquote,
+#custom404 .custom404-message blockquote.uncited {
+    margin: 1.5rem 1rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+/* Suporte para acessibilidade (desativar animação) */
+@media (prefers-reduced-motion: reduce) {
+    #custom404 a::before,
+    .custom404-button::before,
+    blockquote::before,
+    blockquote.uncited::before {
+        animation: none;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .custom404-panel {
+        padding: 1rem 1.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .custom404-image img {
+        max-width: 60%;
+    }
+
+    .custom404-title {
+        font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+    }
+
+    .custom404-message {
+        max-width: 95%;
+    }
+
+    #custom404 a,
+    .custom404-button {
+        padding: 0.6rem 1.4rem;
+        font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+    }
+
+    blockquote,
+    blockquote.uncited {
+        margin: 1rem 0.5rem;
+        padding: 0.8rem 0.8rem 0.8rem 1.5rem;
+    }
+
+    blockquote cite {
+        font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    }
+
+    blockquote p,
+    blockquote.uncited div {
+        font-size: clamp(0.85rem, 1.7vw, 0.95rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .custom404-panel {
+        padding: 0.75rem 1rem;
+        margin: 1.5rem 0.75rem;
+    }
+
+    .custom404-image img {
+        max-width: 70%;
+    }
+
+    #custom404 a,
+    .custom404-button {
+        padding: 0.5rem 1.2rem;
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    blockquote,
+    blockquote.uncited {
+        margin: 0.7rem 0.3rem;
+        padding: 0.7rem 0.7rem 0.7rem 1.2rem;
+    }
+
+    blockquote cite {
+        font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+    }
+
+    blockquote p,
+    blockquote.uncited div {
+        font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    }
+}
